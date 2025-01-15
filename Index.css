@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.nav{
+    height: 45px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    position: sticky;
+    display: none;
+ 
+}
+
+#menu{
+display: flex;
+align-items: center;
+justify-content: space-between;
+display: none;
+
+
+}
+
+
+.nav h2{
+color: rgb(52, 1, 1);
+font-size: 20px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+cursor: pointer;
+padding: 5px 5px;
+}
+
+
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(2, 62, 62);
+    cursor: pointer;
+    gap:80px;
+   
+    
+   
+}
+
+.nav ul li{
+    list-style-type: none;
+    
+}
+
+
+.nav button{
+    height: 40px;
+    width: 8vw;
+    text-align: center;
+    color:rgb(5, 53, 95);
+    background-color: rgb(184, 170, 170);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    transition: all 0.3s;
+    display: none;
+
+}
+
+
+
+
+.sign{
+    position: absolute;
+    right: 20px;
+}
+
+.nav button:hover{
+background:linear-gradient(to top, black,transparent);
+color: beige;
+}
+
+
+
+@media (max-width:720px) {
+   .nav ul{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+height: 40vh;
+   }
+
+#menu{
+    
+    display:flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.nav button{
+    display: inline-flex;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+.search-area{
+    height: 400px;
+    width: 100%;
+    background-image: url(bg.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    
+}
+
+.black{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.308);
+    width: 100%;
+    height: 100%;
+   
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px
+   
+}
+
+.content h1{
+    color:aliceblue;
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+
+@media (max-width:750px) {
+  .content h1{
+    font-size: 6vw;
+  }
+
+  .content p{
+    font-size: 2rem;
+  }
+}
+
+.content p{
+    font-size: 1.5rem;
+    color: rgb(194, 194, 201);
+    font-weight: 400;
+
+}
+
+.search-box{
+    width: 55%;
+    height: 15%;
+    background-color: aliceblue;
+    border-radius: 30px;
+    position: relative;
+    
+}
+
+.search-box input{
+     width:85%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 20px;
+   
+}
+
+.search-box placeholder{
+font-size: 17px;
+}
+.search-box #search-data{
+height: 100%;
+width: 10vw;
+border-radius: 15px;
+background-color: rgb(21, 193, 136);
+position: absolute;
+outline: none;
+border: none;
+font-size: 18px;
+color: aliceblue;
+cursor: pointer;
+}
+
+.search-box #search-data:hover{
+    background-color: rgb(19, 255, 176);
+    font-size: 17.5px;
+
+}
+
+@media (max-width:750px) {
+    
+    #search-data{
+        max-width: 20%;
+        position: absolute;
+        bottom: 0px;
+        right:12px;
+        
+    }
+
+    .search-box{
+        max-width: 65%;
+        width:55%;
+    }
+
+
+    .search-box input{
+        width:80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+.image-gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery .images{
+columns: 5 340px;
+max-width: 95%;
+margin-top: 17px;
+
+ 
+
+}
+.image .photo{
+    width: 100%;
+    height: 50%;
+    transition:  all 0.5s;
+    cursor: pointer;
+    
+} 
+
+.image{
+    position: relative;
+    
+}
+
+.image{
+    overflow: hidden;
+}
+
+
+.image .photo:hover{
+    transform: scale(110%);
+}
+
+.image .details{
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+   height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    transition: all 0.3s;
+   gap:10px;
+}
+
+
+.image:hover .details{
+    bottom: 0;
+    background: linear-gradient(to top,black,transparent);
+}
+.image .details:hover{
+    background: linear-gradient(to top,black,transparent);
+    padding: 20px;
+}
+
+.details .user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+
+
+
+
+
+.download span{
+  padding: 10px 10px;
+  background-color: rgb(5, 188, 139);
+width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+  gap:10px;
+ 
+  
+  
+}
+
+.download img:hover{
+    background-color:rgb(60, 162, 130)
+}
